@@ -95,27 +95,20 @@ angular.module('app.controllers', [])
   };
 }])
 
-.controller('videoCtrl', function($scope, $cordovaCamera) {
+.controller('videoCtrl', function($scope, $rootScope ,$cordovaCamera) {
   $scope.pickVideo = function() {
-
-       var options = {
-
-         mediaType: Camera.MediaType.VIDEO,
-         sourceType: Camera.PictureSourceType.PHOTOLIBRARY
-
-         };
-
-       $cordovaCamera.getPicture(options).then(function(results) {
-
-       $scope.videoUrl = results;
-       for (var i = 0; i < results.length; i++) {
-          console.log('Image URI: ' + results[0]);
-          $rootScope.videos=results[0];
-         }
-      // alert('$scope.videoUrl: '+ videoUrl);
-       });
-
-     };
+      var options = {
+          mediaType: Camera.MediaType.VIDEO,
+          sourceType: Camera.PictureSourceType.PHOTOLIBRARY
+          };
+        $cordovaCamera.getPicture(options).then(function(videoUrl) {
+        $rootScope.videoUrl = videoUrl;
+        alert('$scope.videoUrl: '+ videoUrl);
+        if(!$rootScope.$$phase) {
+          $rootScope.$apply();
+        }
+      });
+      };
 })
 
 .controller('adCreatorStudioCtrl', function($scope) {
