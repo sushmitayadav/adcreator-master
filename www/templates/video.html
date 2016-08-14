@@ -1,0 +1,16 @@
+<ion-view title="Video" id="page4" style=" background-color:#424242" class=" ">
+    <ion-content padding="true"  class="has-header">
+        <div class="spacer" style="width: 300px; height: 25px;"></div>
+          <button class="button button-block button-royal" ng-click="pickVideo()" > Select Frm Gallery</button>
+          <p >
+        <!--  <video class="centerme"  ng-src="{{videos}}"  controls="controls" autoplay>
+             <source type="video/mp4" src="{{videos}}" ></source>
+             <source type="video/ogg"  src="{{videos}}" ></source>width="400" height="350
+          </video>-->
+          <video  class="centerme" controls autoplay>
+            <source src="{{videos}}" type='video/mp4'  />
+         </video>
+        </p>
+        <button id="video-button12" style="border-radius:0px 0px 0px 0px;" class=" button button-assertive  button-block icon ion-upload ">upload</button>
+    </ion-content>
+</ion-view>

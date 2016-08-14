@@ -1,0 +1,23 @@
+<ion-view title="Image" id="page3" style=" background-color:#424242" class=" ">
+  <ion-pane>
+    <ion-content padding="true" class="has-header">
+        <div id="image-button-bar2" class=" button-bar "></div>
+        <div id="image-button-bar4" class=" button-bar "></div>
+        <button class="button button-block button-balanced" ng-click="selImages()" ng-disabled="{{buttonDisable}}">
+          Select Image
+        </button>
+            <p>
+          <img ng-src="{{images}}" class="centerme" />
+        </p>
+        <!--<ion-item>style="max-width:400px;max-height:350px"
+              <ion-label fixed ng-model="caption">Caption</ion-label>
+             <input type="text" ng-model="caption">
+      </ion-item>-->
+  <ion-item>
+  <input  type="text" ng-model="data.caption"></input>
+</ion-item>
+
+    <a  ui-sref="image2" id="image-button32" class=" button button-assertive  button-outline "  ng-click="retcap(data)">Next</a>
+    </ion-content>
+  </ion-pane> <canvas id="tempCanvas"></canvas>
+</ion-view>

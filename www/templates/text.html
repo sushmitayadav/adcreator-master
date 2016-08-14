@@ -1,0 +1,27 @@
+<ion-view title="Text" id="page2"   style=" background-color:#303030" class=" ">
+  <ion-nav-buttons side = "right">
+         <a ui-sref="preview" id="text-button43" class=" button icon ion-ios-redo "></a>
+</ion-nav-buttons>
+    <ion-content padding="true" class="has-header" >
+<div ng-drop="true" ng-drop-success="onDropComplete($data,$event)" >
+  <div style="margin: 0px; line-height: 250px; text-align: center; background-color: rgb(232, 235, 239);">
+    <label class="item item-input">
+  <input type="text">
+</label>
+  </div>
+</div>
+<div>
+  <button class="button button-balanced" ng-click="editText()" >Edit</button>
+</div>
+<!--<div ng-drag="true" ng-drag-data="{{obj}}" ng-drag-success="onDragComplete($data,$event)" ng-center-anchor="true">-->
+    </ion-content>
+    <ion-footer-bar ng-disabled="{{buttonDisable1}}">
+  <div  id="text-bar" >
+    <button class="button icon ion-edit" id="text-button39" >Text</button>
+    <button class="button icon ion-social-tumblr" id="text-button39">Font</button>
+    <button class="button icon ion-android-checkbox-outline-blank" id="text-button39">Border</button>
+    <button class="button icon ion-ios-color-wand" id="text-button39">Color</button>
+    <button class="button icon ion-ios-color-wand" id="text-button39">Background color</button>
+  </div>
+</ion-footer-bar>
+</ion-view>
